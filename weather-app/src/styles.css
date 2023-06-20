@@ -1,0 +1,154 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --blue-1: #3c429e;
+  --blue-2: #4c52ad;
+  --yellow-1: #fac742;
+  --white: #f1f1f1;
+  --grey-1: #ededed;
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+  --shadow-light: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--blue-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search{
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.search input{
+  background-color: var(--shadow-light);
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 1em;
+  color: var(--grey-1);
+  font-size: .8em;
+  text-align: center;
+  caret-color: var(--grey-1);
+}
+
+.search input::placeholder{
+  color: var(--grey-1);
+}
+
+.container {
+  width: 400px;
+  height: 80vh;
+  background-color: var(--blue-2);
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px var(--shadow-dark);
+}
+
+.upper-data {
+  position: relative; /*Usato perché altrimenti l'immagine rimane sopra tutti i div e elementi vari */
+  width: 100%;
+  overflow: hidden;
+  height: 50%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.upper-data img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 100%; */
+  /*border-radius: 20px;*/
+}
+
+.weather-data{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.location{
+  text-align: center;
+  font-size: 1.2em;
+  color: var(--white);
+}
+
+.temperature{
+  text-align: center;
+  color: var(--white);
+  font-size: 4em;
+  font-weight: 900;
+}
+
+.lower-data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 1em;
+}
+
+.info-label{
+  color: var(--white);
+  margin-bottom: .5em;
+}
+
+.information{
+  background-color: var(--shadow-light);
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: 20px;
+}
+
+.info-box{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+.info-box-label{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-box-label img{
+  width: 35%;
+}
+
+.info-box-label span{
+  color: var(--white);
+  font-size: .5em;
+}
+
+.info-box-value{
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--white);
+}
